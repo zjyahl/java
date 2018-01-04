@@ -72,7 +72,7 @@
 		</mvc:argument-resolvers>
 		<mvc:message-converters>
 			<ref bean="stringHttpMessageConverter" />
-			<ref bean="marshallingHttpMessageConverter" />
+			<!-- <ref bean="marshallingHttpMessageConverter" /> -->
 			<ref bean="jackson2HttpMessageConverter" />
 		</mvc:message-converters>
 	</mvc:annotation-driven>
@@ -108,7 +108,7 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="marshallingHttpMessageConverter"
+	<!-- <bean id="marshallingHttpMessageConverter"
 		class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
 		<property name="marshaller" ref="castorMarshaller" />
 		<property name="unmarshaller" ref="castorMarshaller" />
@@ -119,7 +119,7 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller" />
+	<bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller" /> -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		id="internalResourceViewResolver">
